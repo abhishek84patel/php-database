@@ -1,4 +1,4 @@
-<?php 
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,23 +37,23 @@
             <option value="business">Business</option>
             <option value="engineering">Engineering</option>
         </select>
-        <input type="submit" value="submit" name="submit">
-
+        
         <!-- <div>
             <label for="photo">Passport size photo:</label>
             <input type="file" id="photo" name="photo" onclick="passId(imageInput,imageOutput)"  accept="image/*"   >
             <img src="" alt="" id="img" width="20%">
 
         </div>
-
+        
         <div>
             <label for="signature">Signature:</label>
             <input type="file" id="signature" name="signature" onclick="passId(signatureinput , sigOutput)" accept="image/*"   >
             <img src="" alt="" id="Signature-Img" width="20%">
-        </div>
+        </div>-->
         <label for="message">Message:</label>
-        <textarea id="message" name="message"   ></textarea> -->
-
+        <textarea id="message" name="message"   ></textarea> 
+        
+        <input type="submit" value="submit" name="submit">
     </form>
 
     <!-- <input type="file" id="fileInput" onclick=""> -->
@@ -65,4 +65,3 @@
 </body>
 </html>
 
-?>
