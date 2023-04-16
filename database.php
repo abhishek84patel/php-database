@@ -24,23 +24,31 @@ echo("connection");
 // insert of data in database 
 
 
-if(isset($_POST['submit'])) {
-    // echo "hello";
+if(isset($_POST['submit']))
+ {
+    echo "hello";
+    
     $name = $_POST['name'];
     $email=$_POST['email'];
-
+    
     $phone=$_POST['phone'];
     $gender=$_POST['gender'];
     $course=$_POST['course'];
-    $message=$_POST['message']
-
-    $sql="insert into student(name,email,gender,course,message) values( '$name' ,'$email','$phone','$gender', '$course','$message' )";
-
-
-        if(mysqli_query($con,$sql)){
-         echo "<script> alert('sucessfully saved')</script>";
-    }
-   
+    $message=$_POST['message'];
+    
+    
+    $query="insert into `student`(`name`, `email`) values ('abhishjjlaslshek','mrabhishek')"
+    if (mysqli_query($con,$query))
+    {
+             echo "<script> alert('sucessfully saved')</script>";
+        }
 }
+
+// $sql = "INSERT INTO student(name, email, phone, gender, course, message) VALUES ('$name','$email','$phone','$gender','$course','$message')";
+
+
+//     if(mysqli_query($con,$sql)){
+//      echo "<script> alert('sucessfully saved')</script>";
+// }
 
 ?>
