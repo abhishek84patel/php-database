@@ -17,6 +17,7 @@ die("error detected" .mysqli_error($con));
 else{
 
 echo("connection");
+
 }
 
 
@@ -26,7 +27,7 @@ echo("connection");
 
 if(isset($_POST['submit']))
  {
-    echo "hello";
+    // echo "hello";
     
     $name = $_POST['name'];
     $email=$_POST['email'];
@@ -35,13 +36,18 @@ if(isset($_POST['submit']))
     $gender=$_POST['gender'];
     $course=$_POST['course'];
     $message=$_POST['message'];
+    $img=$_POST['uploadfile'];
+    $userImg=$_POST['userphoto'];
     
-    
-    $query="insert into `student`(`name`, `email`) values ('abhishjjlaslshek','mrabhishek')"
-    if (mysqli_query($con,$query))
-    {
-             echo "<script> alert('sucessfully saved')</script>";
-        }
+    $query="insert into `student`(`name`, `email`, `phone`,`gender`, `course`, `message`,`img` ,`userimg`) values ('$name','$email','$phone','$gender', '$course','$message','$img' ,'$userImg')";
+    $result=mysqli_query($con,$query);
+    if ($result) {
+        echo "<script> alert('Thanks for submitting')</script>";
+        include 'fecth.php';
+      } 
+    //   else {
+    //     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    //   }
 }
 
 // $sql = "INSERT INTO student(name, email, phone, gender, course, message) VALUES ('$name','$email','$phone','$gender','$course','$message')";
