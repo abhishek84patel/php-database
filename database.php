@@ -43,7 +43,7 @@ if(isset($_POST['submit']))
     $result=mysqli_query($con,$query);
     if ($result) {
         echo "<script> alert('Thanks for submitting')</script>";
-        include 'fecth.php';
+        header("location:fetch.php");
       } 
     //   else {
     //     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
