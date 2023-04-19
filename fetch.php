@@ -17,7 +17,7 @@ $query="select * from `student` where email= '$email'";
 $result=mysqli_query($con,$query);
 if(mysqli_num_rows($result) > 0){
  $result=mysqli_fetch_assoc($result);
- echo "result = ".$result;
+ echo "id= ".$result['ID']."<br/> Name= ".$result['name']."<br/>Email id=".$result['email'];
 }
 
 ?>
